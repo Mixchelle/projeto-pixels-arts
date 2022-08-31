@@ -1,0 +1,25 @@
+body {
+  background-color: ;
+}
+
+.container {
+    height: auto;
+    display: flex;
+}
+
+
+.color {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    display: inline-block;
+   
+  }
+
+
+.btn {
+    position:fixed;
+    top: 100px;
+    left: 50%;
+
+}

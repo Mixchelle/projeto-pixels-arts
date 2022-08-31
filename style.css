@@ -1,10 +1,14 @@
 body {
   background-color: ;
 }
-
+#title{
+  text-align: center;
+}
+#color-palette{
+  text-align: center;
+}
 .container {
-    height: auto;
-    display: flex;
+   text-align: center;
 }
 
 
@@ -18,8 +22,24 @@ body {
 
 
 .btn {
+  text-align: center;
     position:fixed;
-    top: 100px;
-    left: 50%;
+    top: 120px;
+    left: 47%;
+    cursor: pointer;
+
 
 }
+ #color1{
+  background-color: black;
+ }
+
+ #color2{
+  background-color: red;
+ }
+ #color3{
+  background-color: yellow;
+ }
+ #color4{
+  background-color: blue;
+ }

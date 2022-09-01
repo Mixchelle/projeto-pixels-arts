@@ -7,11 +7,13 @@ function generateColors(){
     }
     return color;
 }
-console.log()
+
 document.getElementById('button-random-color').addEventListener('click', () =>{
     for (let i = 2; i < 5; i += 1){
         let divColor = document.getElementById(`color-${i}`)
         divColor.style.backgroundColor = generateColors()
     }
 })
+
+localStorage.setItem('colorPalette', 'color');
 

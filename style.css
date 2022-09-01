@@ -37,13 +37,39 @@ body {
  #color-1{
   background-color: black;
  }
-
- #color2{
+ #color-2{
   background-color: red;
  }
- #color3{
+ #color-3{
+  background-color:blue;
+ }#color-4{
   background-color: yellow;
  }
- #color4{
-  background-color: blue;
- }
+
+
+ #pixel-board {
+  display: table;
+  background-color: aqua;
+  margin: 10px auto;
+  text-align: center;
+
+}
+
+.line-pixel-board {
+  display: table-row;
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.pixels {
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+  display: table-cell;
+  text-align: center;
+}
+#button-random-color{
+  
+}

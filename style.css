@@ -1,31 +1,57 @@
 body {
-  background-color:#ADD8E6;
+  background-color:papayawhip;
 }
 #title{
+  color: ;
   text-align: center;
+  font-weight: 100;
+  
 }
 #color-palette{
   text-align: center;
 }
 .container {
    text-align: center;
+   
 }
 
+main{
+  background-color;
+   
 
+   
+}
+.selected{
+  border: 4px solid white;
+}
 .color {
     width: 40px;
     height: 40px;
     border: 1px solid black;
     display: inline-block;
+    
    
   }
 
+.button{
+  width: 100px;
+  text-align: center;
 
+    position:fixed;
+    top: 160px;
+    left: 51%;
+    cursor: pointer;
+   c
+    border-radius: 10px;
+    color: antiquewhite;
+    background: black;
+}
 .btn {
+ width: 100px;
   text-align: center;
     position:fixed;
-    top: 120px;
-    left: 47%;
+    top: 150px;
+    left: 45%;
     cursor: pointer;
     border: 2px solid white;
     border-radius: 10px;
@@ -43,7 +69,7 @@ body {
  #color-3{
   background-color:blue;
  }#color-4{
-  background-color: yellow;
+  background-color: pink;
  }
 
 
@@ -52,7 +78,7 @@ body {
   background-color: white;
   margin: 50px auto;
   text-align: center;
-
+margin-top: 100px;
 }
 
 .line-pixel-board {
@@ -75,4 +101,11 @@ body {
 }
 #button-random-color{
   
+}
+
+.pen{
+  display: inline-block;
+  width: 40px;
+  min-height: 40px;
+  border: 1px;
 }

@@ -54,7 +54,6 @@ function handleChangeTech(event) {
   const techElement = document.querySelector('.selected');
   techElement.classList.remove('selected');
   event.target.classList.add('selected');
-  input.value = '';
   generateColors();
 }
 oneLi.addEventListener('click', handleChangeTech)

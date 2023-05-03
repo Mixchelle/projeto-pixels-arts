@@ -11,22 +11,20 @@
 <body>
     <header>
         <h1 id="title">Paleta de Cores</h1>
-      </header>
-
+    </header>
       <ul class="container" id="color-palette">
         <li class="color selected" id="color1"> </li>
         <li class="color" id="color-2"> </li>
         <li class="color" id="color-3""> </li>
         <li class="color" id="color-4"> </li>
       </ul>
-
-            <button class="btn" type= "button" value="Cores aleatórias" id="button-random-color">
-                Cores aleatórias
-            </button>
-            <button class="button" data-event="clearButton" type="button" id="clear-board">
-                Limpar
-              </button>
+     <button class="btn" type= "button" value="Cores aleatórias" id="button-random-color">
+             Cores aleatórias
+      </button>
         
+                <button class="button" id="clear-board">Limpar</button>
+            
+                
     <main id="pixel-board" class="input-container">
         <div class="line-pixel-board ">
             <div class="pixel" onclick="setPixelColour(this)"></div>
@@ -67,7 +65,12 @@
             <div class="pixel" onclick="setPixelColour(this)"></div>
         </div>
 </main>
+<br>
+<!-- <button class="button" id="clear-save-art">Deletar arte salva</button> -->
+                <!-- <label for="boardSize">Escolha o tamanho do seu Board
+                <input min="1" type="number" name="boardSize" id="board-size">
+            </label>
+                <button class="button" id="generate-board">VQV</button> -->
 <script src="script.js"></script>
-<script src="1.js"></script>
 </body>
 </html>

@@ -1,72 +1,67 @@
 body {
   background-color:papayawhip;
 }
+
 #title{
-  color: ;
-  text-align:;
-  font-weight: 100;
-  
+  color:blue;
+  text-align: center;
+  font-weight: 100; 
 }
+
 #color-palette{
-  text-align: ;
+  text-align: center;
 }
-.container {
-   text-align: ;
-   
-}
-
-main{
-  background-color;
-   
-
-   
-}
-
 
 .color {
-    width: 40px;
-    height: 40px;
-    border: 1px solid black;
-    display: inline-block;
-    
-   
-  }
-
-.button{
-  width: 100px;
-  text-align:;
-    position:fixed;
-    top: 160px;
-    left: 140px;
-    cursor: pointer;
-   c
-    border-radius: 10px;
-    color: antiquewhite;
-    background: black;
-}
-.btn {
- width: 100px;
+  width: 40px;
+  height: 40px;
+  border: solid black 1px;
+  display: inline-block;
   text-align: center;
-    position:fixed;
-    top: 150px;
-    left: %;
-    cursor: pointer;
-    border: 2px solid white;
-    border-radius: 10px;
-    color: antiquewhite;
-    background: black;
-    float: left;
-
-
 }
- 
 
- #pixel-board {
-  display: inline-table;
+.button {
+  width: 100px;
+  margin: 0 auto;
+  position: fixed;
+  top: 160px;
+  left: 0;
+  right: 0;
+  cursor: pointer;
+  border-radius: 10px;
+  color: antiquewhite;
+  background: black;
+  text-align: center;
+}
+
+.btn {
+  width: 100px;
+  margin: 0 auto;
+  text-align: center;
+  position: fixed;
+  top: 150px;
+  left: 0;
+  right: 0;
+  cursor: pointer;
+  border: 2px solid white;
+  border-radius: 10px;
+  color: antiquewhite;
+  background: black;
+  float: left;
+}
+
+.input-container {
+  border: 1px solid black;
+  display: table;
+  margin: 0 auto;
+}
+
+#pixel-board {
+  display: table;
   background-color: white;
-  margin: 50px auto;
-  text-align: ;
-margin-top: 100px;
+  margin: 0 auto;
+  margin-top: 100px;
+  text-align: center;
 }
 
 .line-pixel-board {
@@ -74,8 +69,8 @@ margin-top: 100px;
   width: 20px;
   height: 20px;
   border: 1px solid black;
-  text-align:;
   left: 57%;
+  text-align: center;
 }
 
 .pixel {
@@ -83,14 +78,42 @@ margin-top: 100px;
   height: 40px;
   border: 1px solid black;
   display: table-cell;
-  background-color:white;
-  
-  
-}
-#button-random-color{
-  
+  background-color: white;
+  text-align: center;
 }
 
 .container {
+  text-align: center;
+  margin: 0 auto;
+}
 
+#button-random-color {
+  margin-right: 50%;
+  margin-left: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1e90ff;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 45%;
+  margin-right: 40%;
+}
+
+#clear-board {
+  align-items: center;
+  text-align: center;
+  margin-left: 40%;
+  margin-right: 10%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1e90ff;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

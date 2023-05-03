@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 generateBoardButton.addEventListener('click', () => {
   const size = parseInt(boardSizeInput.value);
-  if (size >= 5 && size <= 50) {
+  if (size >= 5 && size <= 10) {
     createPixelBoard(size);
   } else {
     alert('Board inválido!');

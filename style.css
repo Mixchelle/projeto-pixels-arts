@@ -1,119 +1,131 @@
 body {
-  background-color:papayawhip;
+  font-family: Silkscreen, monospace;
+  background-image: url('./p.jpg');
+  background-size: 110%;
+  color: rgb(235, 235, 231);
 }
 
-#title{
-  color:blue;
+#color-palette {
   text-align: center;
-  font-weight: 100; 
-}
-
-#color-palette{
-  text-align: center;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  display: flex;
+  gap: 14px;
+  width: 204.4px; 
+  background-color: rgba(11, 11, 11, 0.5);
+  border: 2px solid rgb(6, 6, 6);
+  border-radius: 10px;
 }
 
 .color {
-  width: 40px;
-  height: 40px;
-  border: solid black 1px;
-  display: inline-block;
-  text-align: center;
-}
-
-.button {
-  width: 100px;
-  margin: 0 auto;
-  position: fixed;
-  top: 160px;
-  left: 0;
-  right: 0;
-  cursor: pointer;
-  border-radius: 10px;
-  color: antiquewhite;
-  background: black;
-  text-align: center;
-}
-
-.btn {
-  width: 100px;
-  margin: 0 auto;
-  text-align: center;
-  position: fixed;
-  top: 150px;
-  left: 0;
-  right: 0;
-  cursor: pointer;
-  border: 2px solid white;
-  border-radius: 10px;
-  color: antiquewhite;
-  background: black;
-  float: left;
-}
-
-.input-container {
   border: 1px solid black;
-  display: table;
-  margin: 0 auto;
+  padding: 20px;
+  display: inline-block;
+}
+
+.black {
+  background-color: black;
+}
+
+button {
+  border: 1px solid black;
+  height: 41.1px;
+  width: auto;
+  cursor: pointer;
+  display: inline-block;
+  background-color: rgb(5, 5, 5);
+  color: rgb(251, 252, 253);
+  border-radius: 5px;
+}
+
+button:hover {
+  filter: brightness(110%);
+}
+
+button:active {
+  filter: brightness(75%);
 }
 
 #pixel-board {
-  display: table;
-  background-color: white;
-  margin: 0 auto;
-  margin-top: 100px;
-  text-align: center;
-}
-
-.line-pixel-board {
-  display: table-row;
-  width: 20px;
-  height: 20px;
-  border: 1px solid black;
-  left: 57%;
-  text-align: center;
+  display: grid;
+padding: 30px;
 }
 
 .pixel {
+  display: inline-block;
+  background-color: white;
+  border: 1px solid black;
   width: 40px;
   height: 40px;
-  border: 1px solid black;
-  display: table-cell;
-  background-color: white;
-  text-align: center;
+ 
 }
 
-.container {
-  text-align: center;
-  margin: 0 auto;
-}
-
-#button-random-color {
-  margin-right: 50%;
-  margin-left: 10px;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  background-color: #1e90ff;
-  color: white;
-  font-size: 14px;
-  cursor: pointer;
-  margin-left: 45%;
-  margin-right: 40%;
+.clear {
+  padding: 10px 2px;
+  width: 33%;
+  align-items: center;
 }
 
 #clear-board {
-  align-items: center;
-  text-align: center;
-  margin-left: 40%;
-  margin-right: 10%;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  background-color: #1e90ff;
-  color: white;
-  font-size: 14px;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: #040404;
+  color: #e9e6da;
+  margin: auto;
 }
+
+.input {
+  display: flex;
+  margin: 10px 0;
+}
+
+#board-size {
+  width: 95px;
+}
+
+#generate-board {
+  padding: 10px 20px;
+  background-color: #111110;
+  color: #edece5;
+}
+
+#title {
+  animation: rainbow 5s infinite;
+  font-weight: 100;
+  text-align: center;
+  font-size: 40px;
+  background-color: rgba(0, 0, 0, 0.5); /* adiciona um background preto transparente */  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  padding: 20px;
+}
+
+
+  .white-transparent {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 0px 10px rgba(0, 0, 255, 1), 0px 0px 10px rgba(255, 0, 255, 1), 0px 0px 10px rgba(128, 0, 128, 1), 0px 0px 10px rgba(255, 255, 0, 1);
+
+    
+  }
+
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    top: 15%;
+    bottom: 15%;
+  }
+
+  .color_selected{
+  border: 3px solid black;
+  padding: 20px;
+  display: inline-block;
+  }
+
+  .selected {
+    border:rgb(235, 235, 231) 3px solid
+  }

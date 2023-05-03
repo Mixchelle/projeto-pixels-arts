@@ -1,76 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    
     <title>Projeto Artes com pixels</title>
-</head>
-<body>
-    <header>
-        <h1 id="title">Paleta de Cores</h1>
-    </header>
-      <ul class="container" id="color-palette">
-        <li class="color selected" id="color1"> </li>
-        <li class="color" id="color-2"> </li>
-        <li class="color" id="color-3""> </li>
-        <li class="color" id="color-4"> </li>
-      </ul>
-     <button class="btn" type= "button" value="Cores aleatórias" id="button-random-color">
-             Cores aleatórias
-      </button>
-        
-                <button class="button" id="clear-board">Limpar</button>
-            
-                
-    <main id="pixel-board" class="input-container">
-        <div class="line-pixel-board ">
-            <div class="pixel" onclick="setPixelColour(this)"></div>
-            <div class="pixel" onclick="setPixelColour(this)"></div>
-            <div class="pixel" onclick="setPixelColour(this)"></div>
-            <div class="pixel" onclick="setPixelColour(this)"></div>
-            <div class="pixel" onclick="setPixelColour(this)"></div>
+  </head>
+  <body>
+    <div class="center">
+      <div class="white-transparent">
+        <header>
+          <h1 id="title">Paleta de Cores</h1>
+        </header>
+        <ul class="container" id="color-palette">
+          <li class="color selected" id="color1"></li>
+          <li class="color" id="color-2"></li>
+          <li class="color" id="color-3"></li>
+          <li class="color" id="color-4"></li>
+        </ul>
+        <button class="btn" type="button" value="Cores aleatórias" id="button-random-color">
+          Cores aleatórias
+        </button>
+        <button class="btn" id="clear-board">Limpar</button>
+        <div id="board-size-container">
+          <label for="board-size">Tamanho da grade: </label>
+          <input type="number" id="board-size" min="1" max="50" value="5">
+          <button class="btn" id="generate-board">vqv!</button>
         </div>
-        
-        <div class="line-pixel-board ">
-            <div class="pixel" onclick="setPixelColour(this)"></div>
-            <div class="pixel" onclick="setPixelColour(this)"></div>
-            <div class="pixel" onclick="setPixelColour(this)"></div>
-            <div class="pixel" onclick="setPixelColour(this)"></div>
-            <div class="pixel" onclick="setPixelColour(this)"></div>
-        </div>
-        <div class="line-pixel-board ">
-            <div class="pixel" onclick="setPixelColour(this)"></div>
-            <div class="pixel" onclick="setPixelColour(this)"></div>
-            <div class="pixel" onclick="setPixelColour(this)"></div>
-            <div class="pixel" onclick="setPixelColour(this)"></div>
-            <div class="pixel" onclick="setPixelColour(this)"></div>
-        </div>
-        
-        <div class="line-pixel-board ">
-            <div class="pixel" onclick="setPixelColour(this)"></div>
-            <div class="pixel" onclick="setPixelColour(this)"></div>
-            <div class="pixel" onclick="setPixelColour(this)"></div>
-            <div class="pixel" onclick="setPixelColour(this)"></div>
-            <div class="pixel" onclick="setPixelColour(this)"></div>
-        </div>
-        
-        <div class="line-pixel-board ">
-            <div class="pixel" onclick="setPixelColour(this)"></div>
-            <div class="pixel" onclick="setPixelColour(this)"></div>
-            <div class="pixel" onclick="setPixelColour(this)"></div>
-            <div class="pixel" onclick="setPixelColour(this)"></div>
-            <div class="pixel" onclick="setPixelColour(this)"></div>
-        </div>
-</main>
-<br>
-<!-- <button class="button" id="clear-save-art">Deletar arte salva</button> -->
-                <!-- <label for="boardSize">Escolha o tamanho do seu Board
-                <input min="1" type="number" name="boardSize" id="board-size">
-            </label>
-                <button class="button" id="generate-board">VQV</button> -->
-<script src="script.js"></script>
-</body>
+        <main id="pixel-board" class="input-container">
+        </main>
+        <br />
+        <button class="btn" id="clear-save-art">Deletar arte salva</button>
+        <button class="btn" id="download-pixel-art">Baixar desenho</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>

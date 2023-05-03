@@ -8,7 +8,6 @@ function generateColors() {
   return color;
 }
 
-// Função para salvar o desenho atual no localStorage
 function savePixelBoard() {
   const pixels = document.querySelectorAll('.pixel');
   const pixelColors = [];
@@ -24,7 +23,9 @@ function loadPixelBoard() {
   if (pixelColors) {
     const pixels = document.querySelectorAll('.pixel');
     pixels.forEach((p, i) => {
-      p.style.backgroundColor = pixelColors[i];
+      const elemento = p;
+      const color = pixelColors[i];
+      elemento.style.backgroundColor = color;
     });
   }
 }
@@ -61,8 +62,8 @@ window.addEventListener('load', () => {
 });
 
 // Função para setar a cor selecionada no pixel
-function setPixelColour(pixel) {
-  const pixelElement = pixel;
+function setPixelColour(event) {
+  const pixelElement = event.target;
   pixelElement.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
   savePixelBoard();
 }
@@ -99,3 +100,69 @@ oneLi.addEventListener('click', handleChangeTech);
 firstLi.addEventListener('click', handleChangeTech);
 secondLi.addEventListener('click', handleChangeTech);
 thirdLi.addEventListener('click', handleChangeTech);
+
+const boardSizeInput = document.querySelector('#board-size');
+const generateBoardButton = document.querySelector('#generate-board');
+const pixelBoard = document.querySelector('#pixel-board');
+
+function createPixelBoard(size) {
+  pixelBoard.innerHTML = '';
+  for (let i = 0; i < size; i++) {
+    const line = document.createElement('div');
+    line.classList.add('line-pixel-board');
+    for (let j = 0; j < size; j++) {
+      const pixel = document.createElement('div');
+      pixel.classList.add('pixel');
+      pixel.addEventListener('click', (event) => {
+        setPixelColour(event);
+      });
+      line.appendChild(pixel);
+    }
+    pixelBoard.appendChild(line);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  createPixelBoard(5);
+});
+
+generateBoardButton.addEventListener('click', () => {
+  const size = parseInt(boardSizeInput.value);
+  if (size >= 5 && size <= 50) {
+    createPixelBoard(size);
+  } else {
+    alert('Board inválido!');
+  }
+}); // creates initial 5x5 pixel board
+
+function downloadPixelArt() {
+  const pixelArt = localStorage.getItem('pixelBoard');
+  if (pixelArt) {
+    const canvas = document.createElement('canvas');
+    canvas.width = canvas.height = 400; // ajuste o tamanho do canvas de acordo com o tamanho do seu pixel art
+    const ctx = canvas.getContext('2d');
+    const imgData = ctx.createImageData(400, 400);
+    const arrPixelArt = JSON.parse(pixelArt);
+    for (let i = 0; i < arrPixelArt.length; i++) {
+      const pixel = arrPixelArt[i];
+      const index = i * 4;
+      const color = pixel.slice(1); // remove o caractere '#' do início da string
+      imgData.data[index] = parseInt(color.slice(0, 2), 16); // converte os valores hexadecimais em inteiros
+      imgData.data[index + 1] = parseInt(color.slice(2, 4), 16);
+      imgData.data[index + 2] = parseInt(color.slice(4, 6), 16);
+      imgData.data[index + 3] = 255;
+    }
+    ctx.putImageData(imgData, 0, 0);
+    const downloadLink = document.createElement('a');
+    downloadLink.download = 'pixel-art.png';
+    downloadLink.href = canvas.toDataURL();
+    downloadLink.click();
+  }
+}
+
+
+// Adicione um botão no HTML com id "download-pixel-art"
+const downloadButton = document.getElementById('download-pixel-art');
+
+// Adicione um event listener no botão para disparar a função de download
+downloadButton.addEventListener('click', downloadPixelArt);
